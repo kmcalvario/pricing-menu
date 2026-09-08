@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development — Services &amp; Pricing</title>
+<style>
+  :root{
+    --bg:#0b0d12; --surface:#131722; --surface2:#1a2032; --line:#252d42;
+    --text:#e8ecf4; --muted:#9aa5bd; --accent:#6d7cff; --accent2:#22d3ee;
+    --grad:linear-gradient(120deg,#6d7cff,#22d3ee);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  header{padding:72px 0 40px;text-align:center}
+  .eyebrow{display:inline-block;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 16px;margin-bottom:20px}
+  h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;font-weight:800}
+  h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--muted);max-width:640px;margin:16px auto 0;font-size:1.05rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:40px 0}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;position:relative;transition:transform .2s,border-color .2s}
+  .card:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .card.feature{border-color:var(--accent);background:var(--surface2)}
+  .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--grad);color:#0b0d12;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 14px;border-radius:999px;white-space:nowrap}
+  .tier{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);font-weight:700}
+  h2{font-size:1.35rem;margin:6px 0 2px}
+  .tech{color:var(--muted);font-size:.85rem;min-height:44px}
+  .price{margin:18px 0 4px}
+  .price .from{font-size:1.9rem;font-weight:800}
+  .price .cur{font-size:.95rem;color:var(--muted);font-weight:600}
+  .range{color:var(--muted);font-size:.82rem;margin-bottom:16px}
+  ul{list-style:none;margin:0 0 20px;flex:1}
+  li{font-size:.9rem;padding:5px 0 5px 26px;position:relative;color:#cdd5e6}
+  li::before{content:"✓";position:absolute;left:0;color:var(--accent2);font-weight:700}
+  .meta{font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-bottom:16px}
+  .cta{display:block;text-align:center;background:var(--grad);color:#0b0d12;font-weight:700;text-decoration:none;padding:11px;border-radius:10px;font-size:.92rem}
+  .card:not(.feature) .cta{background:transparent;color:var(--text);border:1px solid var(--line)}
+  .card:not(.feature) .cta:hover{border-color:var(--accent)}
+  section{padding:48px 0}
+  h3.sec{font-size:1.7rem;text-align:center;margin-bottom:8px}
+  p.secsub{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 36px}
+  .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .addons{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .addon{display:flex;justify-content:space-between;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:.9rem}
+  .addon b{font-weight:600}
+  .addon span{color:var(--accent2);font-weight:700;white-space:nowrap}
+  .terms{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;display:grid;gap:10px;max-width:760px;margin:0 auto}
+  .terms div{display:flex;gap:12px;font-size:.95rem;color:#cdd5e6}
+  .terms div::before{content:"→";color:var(--accent2);font-weight:700}
+  footer{border-top:1px solid var(--line);padding:36px 0 48px;text-align:center;color:var(--muted);font-size:.9rem}
+  footer a{color:var(--accent2);text-decoration:none}
+  @media(max-width:640px){header{padding:48px 0 24px}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <span class="eyebrow">Services &amp; Pricing</span>
+  <h1>Websites priced by <span>value delivered</span>,<br>not hours worked.</h1>
+  <p class="sub">Fixed-scope packages on a modern code stack — from fast static sites
+  to full custom applications. Every package includes design, build, deployment, and launch.</p>
+</header>
+
+<main class="wrap">
+
+  <div class="grid">
+
+    <div class="card">
+      <span class="tier">Tier 1 · Static</span>
+      <h2>Foundation</h2>
+      <p class="tech">Static rendering, no database, no logins. Forms via trusted third parties.</p>
+      <div class="price"><span class="cur">from</span> <span class="from">$500</span></div>
+      <p class="range">typical: $500 – $1,500</p>
+      <ul>
+        <li>Up to 5 custom responsive pages</li>
+        <li>Design mockups approved before build</li>
+        <li>Contact form + spam protection</li>
+        <li>Animations &amp; analytics-ready</li>
+        <li>SEO basics + launch included</li>
+      </ul>
+      <p class="meta">⏱ 1–2 weeks · 2 revision rounds</p>
+      <a class="cta" href="#contact">Start a Project</a>
+    </div>
+
+    <div class="card feature">
+      <span class="badge">Most Popular</span>
+      <span class="tier">Tier 2 · Interactive</span>
+      <h2>Signature</h2>
+      <p class="tech">Interactive components, API integrations, and a CMS you can edit yourself.</p>
+      <div class="price"><span class="cur">from</span> <span class="from">$1,500</span></div>
+      <p class="range">typical: $1,500 – $5,000</p>
+      <ul>
+        <li>Up to 12 pages, custom interactive features</li>
+        <li>Edit content yourself — no developer needed</li>
+        <li>Booking, maps &amp; email marketing wired in</li>
+        <li>Calculators, galleries, multi-step forms</li>
+        <li>Everything in Foundation, plus more</li>
+      </ul>
+      <p class="meta">⏱ 2–4 weeks · 3 revision rounds</p>
+      <a class="cta" href="#contact">Start a Project</a>
+    </div>
+
+    <div class="card">
+      <span class="tier">Tier 3 · Database</span>
+      <h2>Commerce</h2>
+      <p class="tech">Database, user accounts, secure payments, and an admin dashboard.</p>
+      <div class="price"><span class="cur">from</span> <span class="from">$3,000</span></div>
+      <p class="range">typical: $3,000 – $12,000</p>
+      <ul>
+        <li>Store or portal architecture</li>
+        <li>User accounts &amp; secure payments</li>
+        <li>Admin dashboard for orders &amp; content</li>
+        <li>Transactional emails &amp; basic reporting</li>
+        <li>Staging review before launch</li>
+      </ul>
+      <p class="meta">⏱ 4–8 weeks · 3 rounds + staging review</p>
+      <a class="cta" href="#contact">Start a Project</a>
+    </div>
+
+    <div class="card">
+      <span class="tier">Tier 4 · Enterprise</span>
+      <h2>Bespoke</h2>
+      <p class="tech">Custom architecture: APIs, integrations, permissions — built to scale.</p>
+      <div class="price"><span class="cur">from</span> <span class="from">$8,000</span></div>
+      <p class="range">quoted per phase</p>
+      <ul>
+        <li>Discovery workshop + technical spec</li>
+        <li>Phased delivery: MVP → iterate</li>
+        <li>Custom APIs &amp; system integrations</li>
+        <li>Role-based access &amp; monitoring</li>
+        <li>Team training + documentation</li>
+      </ul>
+      <p class="meta">⏱ 8–16+ weeks · per-phase reviews</p>
+      <a class="cta" href="#contact">Book a Discovery Call</a>
+    </div>
+
+  </div>
+
+  <section>
+    <h3 class="sec">Care Plans</h3>
+    <p class="secsub">Every build includes 2 free months of Essential Care — because a website is a living thing, not a one-time delivery.</p>
+    <div class="plans">
+      <div class="card">
+        <span class="tier">Essential</span>
+        <h2>$79<span class="cur">/mo</span></h2>
+        <ul>
+          <li>Uptime monitoring &amp; daily backups</li>
+          <li>Security &amp; dependency updates</li>
+          <li>30 min of small edits monthly</li>
+          <li>Monthly health report</li>
+        </ul>
+        <a class="cta" href="#contact">Choose Essential</a>
+      </div>
+      <div class="card">
+        <span class="tier">Growth</span>
+        <h2>$199<span class="cur">/mo</span></h2>
+        <ul>
+          <li>Everything in Essential</li>
+          <li>Up to 2 hrs of updates monthly</li>
+          <li>Monthly analytics report</li>
+          <li>48-hour priority support</li>
+        </ul>
+        <a class="cta" href="#contact">Choose Growth</a>
+      </div>
+      <div class="card">
+        <span class="tier">Scale</span>
+        <h2>$499<span class="cur">/mo</span></h2>
+        <ul>
+          <li>Everything in Growth</li>
+          <li>4 dedicated dev hours monthly</li>
+          <li>Feature iterations</li>
+          <li>Quarterly strategy call · 24-h response</li>
+        </ul>
+        <a class="cta" href="#contact">Choose Scale</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3 class="sec">Add-Ons</h3>
+    <p class="secsub">Extend any package — quoted upfront, never surprise-billed.</p>
+    <div class="addons">
+      <div class="addon"><b>SEO foundation</b><span>$300+</span></div>
+      <div class="addon"><b>Copywriting (per page)</b><span>$100+</span></div>
+      <div class="addon"><b>Brand starter</b><span>$400+</span></div>
+      <div class="addon"><b>Analytics &amp; tracking</b><span>$200+</span></div>
+      <div class="addon"><b>Multilingual (per language)</b><span>$400+</span></div>
+      <div class="addon"><b>Rush delivery</b><span>+25–50%</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h3 class="sec">How We Work</h3>
+    <p class="secsub">Simple, transparent terms — so you always know what happens next.</p>
+    <div class="terms">
+      <div>50% deposit to start, 50% at launch (larger projects billed per milestone)</div>
+      <div>Written scope before any work begins — change orders priced upfront</div>
+      <div>Care Plans billed monthly, 3-month minimum, then month-to-month</div>
+      <div>Invoiced in USD; MXN, COP, and EUR accepted at current rates</div>
+      <div>30-day post-launch bug-fix warranty on every build</div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap" id="contact">
+  <p><strong>Ready to build?</strong> Tell us about your project and we'll reply within one business day.</p>
+  <p><a href="mailto:hello@yourstudio.com">hello@yourstudio.com</a> · Your City · Worldwide remote</p>
+  <p style="margin-top:12px;font-size:.8rem">© 2026 Your Studio. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
